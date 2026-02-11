@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oasis InfoByte Landing Page</title>
+
+    <style>
+        /* Basic Reset */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            line-height:1.6;
+        }
+
+        /* Header */
+        header{
+            background:#222;
+            color:white;
+            padding:15px 0;
+        }
+
+        nav{
+            width:85%;
+            margin:auto;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        nav h1{
+            font-size:24px;
+        }
+
+        nav ul{
+            list-style:none;
+            display:flex;
+            gap:20px;
+        }
+
+        nav ul li a{
+            color:white;
+            text-decoration:none;
+        }
+
+        /* Hero Section */
+        .hero{
+            height:60vh;
+            background:linear-gradient(to right,#4facfe,#00f2fe);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            color:white;
+        }
+
+        .hero h2{
+            font-size:36px;
+            margin-bottom:10px;
+        }
+
+        .hero button{
+            padding:10px 20px;
+            border:none;
+            margin-top:10px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        /* Features */
+        .features{
+            padding:50px 0;
+            text-align:center;
+            background:#f4f4f4;
+        }
+
+        .feature-container{
+            width:85%;
+            margin:30px auto 0;
+            display:flex;
+            justify-content:space-between;
+        }
+
+        .box{
+            background:white;
+            width:30%;
+            padding:20px;
+            border-radius:8px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* About */
+        .about{
+            padding:50px;
+            text-align:center;
+        }
+
+        /* Footer */
+        footer{
+            background:#222;
+            color:white;
+            text-align:center;
+            padding:15px 0;
+        }
+
+        /* Responsive */
+        @media(max-width:768px){
+            .feature-container{
+                flex-direction:column;
+                gap:20px;
+            }
+
+            .box{
+                width:100%;
+            }
+
+            nav ul{
+                display:none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <h1>Oasis InfoByte</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div>
+            <h2>Learn Web Development Easily</h2>
+            <p>Create beautiful landing pages using HTML & CSS</p>
+            <button>Start Learning</button>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2>Features</h2>
+        <div class="feature-container">
+            <div class="box">
+                <h3>Simple Structure</h3>
+                <p>Understand how sections, headers, and columns work together.</p>
+            </div>
+            <div class="box">
+                <h3>Creative Styling</h3>
+                <p>Use CSS to design colors, spacing, and alignment properly.</p>
+            </div>
+            <div class="box">
+                <h3>Responsive Design</h3>
+                <p>This page adjusts for mobile and desktop screens.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+        <h2>About Oasis InfoByte</h2>
+        <p>
+            This project helps beginners practice HTML and CSS by building a real landing page.
+            Focus on layout, padding, colors, and alignment without overlapping elements.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Oasis InfoByte | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+            line-height:1.6;
+            color:#333;
+        }
+
+        /* Header */
+        header{
+            background:#222;
+            color:white;
+            padding:20px 0;
+            text-align:center;
+        }
+
+        header h1{
+            margin-bottom:5px;
+        }
+
+        /* Profile Section */
+        .profile{
+            text-align:center;
+            padding:40px 20px;
+            background:white;
+        }
+
+        .profile img{
+            width:150px;
+            height:150px;
+            border-radius:50%;
+            object-fit:cover;
+            margin-bottom:15px;
+        }
+
+        /* About */
+        .about{
+            padding:30px 20px;
+            text-align:center;
+        }
+
+        /* Skills */
+        .skills{
+            background:white;
+            padding:30px 20px;
+        }
+
+        .skills h2{
+            text-align:center;
+            margin-bottom:20px;
+        }
+
+        .skill-box{
+            display:flex;
+            justify-content:space-around;
+            text-align:center;
+        }
+
+        .box{
+            width:30%;
+            padding:15px;
+            background:#eaeaea;
+            border-radius:8px;
+        }
+
+        /* Projects */
+        .projects{
+            padding:30px 20px;
+            text-align:center;
+        }
+
+        /* Contact */
+        .contact{
+            background:white;
+            padding:30px 20px;
+            text-align:center;
+        }
+
+        /* Footer */
+        footer{
+            background:#222;
+            color:white;
+            text-align:center;
+            padding:15px 0;
+        }
+
+        /* Responsive */
+        @media(max-width:768px){
+            .skill-box{
+                flex-direction:column;
+                gap:15px;
+            }
+
+            .box{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Kiruthika</h1>
+        <p>Web Developer | Student</p>
+    </header>
+
+    <!-- Profile -->
+    <section class="profile">
+        <h2>Hello! I’m Kiruthika 👋</h2>
+        <p>I am learning Web Development using HTML and CSS.</p>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            I am passionate about creating beautiful websites. I enjoy learning
+            new technologies and building creative projects that improve my skills.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+        <h2>My Skills</h2>
+        <div class="skill-box">
+            <div class="box">HTML</div>
+            <div class="box">CSS</div>
+            <div class="box">C++</div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects">
+        <h2>Projects</h2>
+        <p>Landing Page | Portfolio Website | Mini Web Projects</p>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: kiruthika@email.com</p>
+        <p>Phone: 9876543210</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Kiruthika | Portfolio</p>
+    </footer>
+
+</body>
+</html>

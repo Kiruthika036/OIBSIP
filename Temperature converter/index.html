@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Temperature Converter</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:linear-gradient(to right,#4facfe,#00f2fe);
+    }
+
+    .container{
+        background:white;
+        padding:30px;
+        border-radius:10px;
+        width:350px;
+        text-align:center;
+        box-shadow:0 0 15px rgba(0,0,0,0.2);
+    }
+
+    h2{
+        margin-bottom:20px;
+    }
+
+    input, select, button{
+        width:100%;
+        padding:10px;
+        margin:10px 0;
+        font-size:16px;
+    }
+
+    button{
+        background:#4facfe;
+        color:white;
+        border:none;
+        cursor:pointer;
+        border-radius:5px;
+    }
+
+    #result{
+        margin-top:15px;
+        font-weight:bold;
+        font-size:18px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Temperature Converter</h2>
+
+    <!-- Input -->
+    <input type="text" id="tempInput" placeholder="Enter temperature">
+
+    <!-- Dropdown -->
+    <select id="unit">
+        <option value="C">Celsius (°C)</option>
+        <option value="F">Fahrenheit (°F)</option>
+        <option value="K">Kelvin (K)</option>
+    </select>
+
+    <!-- Button -->
+    <button onclick="convertTemp()">Convert</button>
+
+    <!-- Result -->
+    <div id="result"></div>
+</div>
+
+<script>
+function convertTemp(){
+    var temp = document.getElementById("tempInput").value;
+    var unit = document.getElementById("unit").value;
+    var result = document.getElementById("result");
+
+    if(isNaN(temp) || temp === ""){
+        result.innerHTML = "Please enter a valid number!";
+        return;
+    }
+
+    temp = parseFloat(temp);
+    var output = "";
+
+    if(unit === "C"){
+        var f = (temp * 9/5) + 32;
+        var k = temp + 273.15;
+        output = temp + "°C = " + f.toFixed(2) + "°F , " + k.toFixed(2) + " K";
+    }
+    else if(unit === "F"){
+        var c = (temp - 32) * 5/9;
+        var k = c + 273.15;
+        output = temp + "°F = " + c.toFixed(2) + "°C , " + k.toFixed(2) + " K";
+    }
+    else if(unit === "K"){
+        var c = temp - 273.15;
+        var f = (c * 9/5) + 32;
+        output = temp + " K = " + c.toFixed(2) + "°C , " + f.toFixed(2) + "°F";
+    }
+
+    result.innerHTML = output;
+}
+</script>
+
+</body>
+</html>
